@@ -15,7 +15,8 @@
 
     if (!cc.dating) {
 
-        cc.dating = _CCSettings = require(cc.INGAME + 'src/settings.js');
+        require(cc.INGAME + 'src/settings.js');
+        cc.dating = _CCSettings = window._CCSettings;
 
 
     } else {

@@ -20,7 +20,7 @@ Class already exists with the same __cid__ : "280c3rsZJJKnZ9RqbALVwtK".
 用cocoscreater构建，编译subgame。
 
 然后在subgame根目录下，执行命令：
-node version_generator.js -v 1.0.0 -u http://192.168.2.114:3000/remote-assets/subgame/ -s build/jsb-binary -d remote-assets/
+node version_generator.js -v 1.0.0 -u http://10.180.5.150:8101/remote-assets/subgame/ -s build/jsb-binary -d remote-assets/
 生成子游戏的热更新文件。
 
 拷贝build/js-binary下生成的res和src文件夹到 romote-assets文件夹。
@@ -30,7 +30,7 @@ node version_generator.js -v 1.0.0 -u http://192.168.2.114:3000/remote-assets/su
 
 注意：坑2，生成的project.manifest放到public/romote-assets/subgame要改名字，改成跟代码里对应的名字，只要不叫project.manifest就行，例如peision.manifest或则sub_game_project.manifest（此处可以修改version_generator.js脚本逻辑给其重命名，免掉手动修改的麻烦）否则每次重启APP都会清空本地下载的子游戏，导致再次进入不了，具体原因未知。
 
-启动hotupdate，在浏览器打开http://192.168.2.114:3000/remote-assets/subgame/version.manifest如果能看到正常的version.manifest内容说明，服务器搭建成功，热更新文件能正常访问。
+启动hotupdate，在浏览器打开http://10.180.5.150:8101/remote-assets/subgame/version.manifest如果能看到正常的version.manifest内容说明，服务器搭建成功，热更新文件能正常访问。
 
 6，  此时运行hall，点击下载游戏，下载完成之后，点击进入游戏，点击返回大厅就能返回。到此，大厅加子游戏demo完成。
 注意：坑3，在ccc自带的模拟器里面是不能返回大厅的，会报无法加载场景对应的json文件的错误。在xcode的模拟器里面没问题。

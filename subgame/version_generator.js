@@ -24,7 +24,7 @@ while ( i < process.argv.length) {
     case '-u' :
         var url = process.argv[i+1];
         manifest.packageUrl = url;
-        manifest.remoteManifestUrl = url + 'project.manifest';
+        manifest.remoteManifestUrl = url + 'peision.manifest';
         manifest.remoteVersionUrl = url + 'version.manifest';
         i += 2;
         break;
@@ -97,7 +97,7 @@ var mkdirSync = function (path) {
 readDir(path.join(src, 'src'), manifest.assets);
 readDir(path.join(src, 'res'), manifest.assets);
 
-var destManifest = path.join(dest, 'project.manifest');
+var destManifest = path.join(dest, 'peision.manifest');
 var destVersion = path.join(dest, 'version.manifest');
 
 mkdirSync(dest);

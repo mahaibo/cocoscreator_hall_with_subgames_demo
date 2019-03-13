@@ -16,7 +16,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function() {
-
+        this._storagePath = ((jsb.fileUtils ? jsb.fileUtils.getWritablePath() : '/') + 'ALLGame/' + "subgame");
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -28,9 +28,7 @@ cc.Class({
     getfiles: function(name, mmm) {
 
 
-        this._storagePath = ((jsb.fileUtils ? jsb.fileUtils.getWritablePath() : '/') + 'ALLGame/' + name);
-
-        var UIRLFILE = "http://192.168.2.114:3000/remote-assets/" + name;
+        var UIRLFILE = "http://10.180.5.150:8101/remote-assets/" + name;
         var filees = this._storagePath + "/peision.manifest";
         this.manifestUrl = filees;
 
@@ -332,6 +330,8 @@ cc.Class({
             cc.find("Canvas/label").getComponent(cc.Label).string = "请先点击下载游戏，检查版本是否更新！！！";
             return;
         }
+        cc.log("enter_sub_game")
+        cc.log(this._storagePath + "/src/main.js")
         require(this._storagePath + "/src/main.js");
     },
     //*************************子游戏demo 结束***************************//

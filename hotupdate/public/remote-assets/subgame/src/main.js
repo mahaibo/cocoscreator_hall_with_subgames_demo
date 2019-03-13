@@ -9,9 +9,9 @@
     cc.INGAME = (jsb.fileUtils ? jsb.fileUtils.getWritablePath() : '/') + "ALLGame/subgame";
 
     if (!cc.subgame) {
-
-        cc.subgame = _CCSettings = require(cc.INGAME + '/src/settings.js');
-        require(cc.INGAME + '/src/project.js');
+        require(cc.INGAME + '/src/settings.js');
+        cc.subgame = _CCSettings = window._CCSettings;
+        require(cc.INGAME + '/src/project.dev.js');
 
     } else {
 

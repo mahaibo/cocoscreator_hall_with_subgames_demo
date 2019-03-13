@@ -1,14 +1,15 @@
 {
   "appKey": "",
   "appSecret": "",
+  "encryptJs": true,
   "excludeScenes": [],
+  "fb-instant-games": {},
   "includeAnySDK": false,
   "includeSDKBox": false,
-  "includeSdk": [
-    "anysdk"
-  ],
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
   "mergeStartScene": false,
   "oauthLoginServer": "",
   "optimizeHotUpdate": false,
@@ -20,8 +21,21 @@
   },
   "packageName": "org.cocos2d.hall",
   "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
   "renderMode": "0",
   "startScene": "7bae9db5-5098-49b0-b306-bcf73c799a85",
   "title": "hall",
-  "webOrientation": "auto"
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx6ac3f5090a6b99c5",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "xxteaKey": "6ba034d9-0eaa-48",
+  "zipCompressJs": true
 }
