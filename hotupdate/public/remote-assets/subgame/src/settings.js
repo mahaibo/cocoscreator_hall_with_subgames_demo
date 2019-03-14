@@ -45,7 +45,6 @@ window._CCSettings = {
             url: "db://assets/hall.fire",
             uuid: "7brp21UJhJsLMGvPc8eZqF"
         }
-
     ],
     packedAssets: {
         "03f133834": [

@@ -24,10 +24,20 @@ require = function() {
   }
   return r;
 }()({
+  DataMgr: [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "b84e4nyeAlDgbbajDRBrAUC", "DataMgr");
+    "use strict";
+    window._DataMgr = {
+      helloworld: ""
+    };
+    cc._RF.pop();
+  }, {} ],
   HelloWorld1: [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "bcd4f/w9htBlLY/hg70lCQK", "HelloWorld1");
     "use strict";
+    require("./DataMgr");
     cc.Class({
       extends: cc.Component,
       properties: {
@@ -39,6 +49,9 @@ require = function() {
       },
       onLoad: function onLoad() {
         this.label.string = this.text;
+        window._DataMgr.helloworld = "hello world!!!";
+        cc.log("helloworld1 onLoad")
+        cc.log(window._DataMgr.helloworld)
       },
       update: function update(dt) {},
       on_back: function on_back() {
@@ -48,7 +61,9 @@ require = function() {
       }
     });
     cc._RF.pop();
-  }, {} ],
+  }, {
+    "./DataMgr": "DataMgr"
+  } ],
   HelloWorld: [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "280c3rsZJJKnZ9RqbALVwtK", "HelloWorld");
@@ -74,4 +89,4 @@ require = function() {
     });
     cc._RF.pop();
   }, {} ]
-}, {}, [ "HelloWorld", "HelloWorld1" ]);
+}, {}, [ "DataMgr", "HelloWorld", "HelloWorld1" ]);

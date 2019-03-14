@@ -17,6 +17,8 @@ cc.Class({
     // use this for initialization
     onLoad: function() {
         this._storagePath = ((jsb.fileUtils ? jsb.fileUtils.getWritablePath() : '/') + 'ALLGame/' + "subgame");
+        cc.log("windows._dataMgr");
+
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -28,7 +30,7 @@ cc.Class({
     getfiles: function(name, mmm) {
 
 
-        var UIRLFILE = "http://10.180.5.150:8101/remote-assets/" + name;
+        var UIRLFILE = "http://10.180.5.150:8102/remote-assets/" + name;
         var filees = this._storagePath + "/peision.manifest";
         this.manifestUrl = filees;
 
@@ -214,6 +216,8 @@ cc.Class({
                 /*8更新完成*/
                 cc.find("Canvas/label").getComponent(cc.Label).string = "更新完成";
 
+                require(this._storagePath + '/src/project.dev.js');
+
                 break;
 
             case jsb.EventAssetsManager.UPDATE_FAILED:
@@ -275,6 +279,7 @@ cc.Class({
             case jsb.EventAssetsManager.ALREADY_UP_TO_DATE:
                 /*4 已经是最新的*/
                 cc.find("Canvas/label").getComponent(cc.Label).string = "已经是最新的了！";
+                require(this._storagePath + '/src/project.dev.js');
                 break;
 
             case jsb.EventAssetsManager.UPDATE_PROGRESSION:
@@ -331,6 +336,11 @@ cc.Class({
             return;
         }
         cc.log("enter_sub_game")
+
+
+        cc.log("window._DataMgr")
+        cc.log(window._DataMgr.helloworld)
+
         cc.log(this._storagePath + "/src/main.js")
         require(this._storagePath + "/src/main.js");
     },
