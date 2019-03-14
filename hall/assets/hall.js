@@ -24,7 +24,7 @@ cc.Class({
         this._storagePath = ((jsb.fileUtils ? jsb.fileUtils.getWritablePath() : '/') + 'ALLGame/' + "subgame");
         cc.log("window.gameMgr");
         window.gameMgr.hall = "hall";
-        if ("undefined" != typeof(window.gameMgr.hall)){
+        if ("undefined" != typeof(window.gameMgr.subgame)){
             this.tips.string = window.gameMgr.subgame;
         }
 
@@ -225,8 +225,6 @@ cc.Class({
                 /*8更新完成*/
                 cc.find("Canvas/label").getComponent(cc.Label).string = "更新完成";
 
-                require(this._storagePath + '/src/project.dev.js');
-
                 break;
 
             case jsb.EventAssetsManager.UPDATE_FAILED:
@@ -288,7 +286,6 @@ cc.Class({
             case jsb.EventAssetsManager.ALREADY_UP_TO_DATE:
                 /*4 已经是最新的*/
                 cc.find("Canvas/label").getComponent(cc.Label).string = "已经是最新的了！";
-                require(this._storagePath + '/src/project.dev.js');
                 break;
 
             case jsb.EventAssetsManager.UPDATE_PROGRESSION:

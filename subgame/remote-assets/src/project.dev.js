@@ -33,9 +33,9 @@ require = function() {
     };
     cc._RF.pop();
   }, {} ],
-  HelloWorld1: [ function(require, module, exports) {
+  HelloWorld: [ function(require, module, exports) {
     "use strict";
-    cc._RF.push(module, "bcd4f/w9htBlLY/hg70lCQK", "HelloWorld1");
+    cc._RF.push(module, "280c3rsZJJKnZ9RqbALVwtK", "HelloWorld");
     "use strict";
     require("./DataMgr");
     cc.Class({
@@ -49,7 +49,7 @@ require = function() {
       },
       onLoad: function onLoad() {
         window.gameMgr.subgame = "subgame";
-        "undefined" != typeof window.gameMgr.subgame && (this.label.string = window.gameMgr.hall);
+        "undefined" != typeof window.gameMgr.hall && (this.label.string = window.gameMgr.hall);
       },
       update: function update(dt) {},
       on_back: function on_back() {
@@ -61,30 +61,5 @@ require = function() {
     cc._RF.pop();
   }, {
     "./DataMgr": "DataMgr"
-  } ],
-  HelloWorld: [ function(require, module, exports) {
-    "use strict";
-    cc._RF.push(module, "280c3rsZJJKnZ9RqbALVwtK", "HelloWorld");
-    "use strict";
-    cc.Class({
-      extends: cc.Component,
-      properties: {
-        label: {
-          default: null,
-          type: cc.Label
-        },
-        text: "Hello_World!"
-      },
-      onLoad: function onLoad() {
-        this.label.string = this.text;
-      },
-      update: function update(dt) {},
-      on_back: function on_back() {
-        cc.log("btn_back clicked!!!!");
-        var storagePath = (jsb.fileUtils ? jsb.fileUtils.getWritablePath() : "/") + "ALLGame/subgame";
-        require(storagePath + "/src/dating.js");
-      }
-    });
-    cc._RF.pop();
-  }, {} ]
-}, {}, [ "DataMgr", "HelloWorld", "HelloWorld1" ]);
+  } ]
+}, {}, [ "DataMgr", "HelloWorld" ]);

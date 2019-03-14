@@ -2,18 +2,18 @@
 
 
 大厅和子游戏均为正常cocos creater项目，只是热更新的时候指向的地址和本地保存的目录不一样。
-
-1，  创建大厅项目
+##热更新
+1.  创建大厅项目
 详细逻辑见 hall项目
 
-2，  创建子游戏项目
+2.  创建子游戏项目
 详细逻辑见 subgame项目
 
 注意：坑1，不要都创建helloworld，可以一个空项目，一个helloworld项目再修改，否则加载子游戏的时候会爆错
 Class already exists with the same __cid__ : "280c3rsZJJKnZ9RqbALVwtK".
 导致子游戏按钮点起来没反应！
 
-3，  打开webstorm创建一个express项目命名hotupdate，目的为托管热更新文件，也可以用其他web服务器。在hotupdate项目的public文件夹下创建remote-assets文件夹。
+3，  创建hotupdate文件夹，目的为托管热更新文件，在hotupdate项目的public文件夹下创建remote-assets文件夹。
 
 4，  在subgame项目根目录下创建build-template/jsb-binary/src文件夹，新建main.js dating.js文件在此文件夹，具体代码参见对应文件，这样每次构建编译，ccc就会自动帮你拷贝到build文件夹下面对应路径。
 
@@ -32,8 +32,45 @@ node version_generator.js -v 1.0.0 -u http://10.180.5.150:8101/remote-assets/sub
 
 启动hotupdate，在浏览器打开http://10.180.5.150:8101/remote-assets/subgame/version.manifest如果能看到正常的version.manifest内容说明，服务器搭建成功，热更新文件能正常访问。
 
-6，  此时运行hall，点击下载游戏，下载完成之后，点击进入游戏，点击返回大厅就能返回。到此，大厅加子游戏demo完成。
-注意：坑3，在ccc自带的模拟器里面是不能返回大厅的，会报无法加载场景对应的json文件的错误。在xcode的模拟器里面没问题。
+##数据传递
+###main.js
+1.初始化window.gameMgr对象
+```$xslt
+// load scene
+cc.director.loadScene(launchScene, null,
+    function () {
+        if (cc.sys.isBrowser) {
+            // show canvas
+            canvas.style.visibility = '';
+            var div = document.getElementById('GameDiv');
+            if (div) {
+                div.style.backgroundImage = '';
+            }
+        }
+        cc.loader.onProgress = null;
+        console.log('Success to load scene: ' + launchScene);
+        window.gameMgr = {}
+    }
+);
 
-注意：build-template里面的main.js 和 dating.js 每个子游戏都应该有一份，需要仔细规划一下，统一代码风格，和项目相关的一些变量。
-同时需要注意这俩文件初始化资源目录的地方开头加斜杠和不叫斜杠的区别，前者去找默认的大厅项目资源，后者是去相对目录找资源。
+```
+
+
+###hall.js
+2.将大厅数据赋值给windows.gameMgr.hall，并且获取子游戏数据
+
+```$xslt
+window.gameMgr.hall = "hall";
+if ("undefined" != typeof(window.gameMgr.subgame)){
+    this.tips.string = window.gameMgr.subgame;
+}
+```
+###HelloWorld.js
+3.将子游戏数据赋值给windows.gameMgr.subgame，并且获取大厅数据
+
+```$xslt
+window.gameMgr.subgame = "subgame";
+if ("undefined" != typeof(window.gameMgr.hall)){
+    this.label.string = window.gameMgr.hall;
+}
+```

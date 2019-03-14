@@ -1,3 +1,5 @@
+require("./DataMgr");
+
 cc.Class({
     extends: cc.Component,
 
@@ -12,7 +14,10 @@ cc.Class({
 
     // use this for initialization
     onLoad: function() {
-        this.label.string = this.text;
+        window.gameMgr.subgame = "subgame";
+        if ("undefined" != typeof(window.gameMgr.hall)){
+            this.label.string = window.gameMgr.hall;
+        }
     },
 
     // called every frame

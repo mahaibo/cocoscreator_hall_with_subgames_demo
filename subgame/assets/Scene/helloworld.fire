@@ -683,7 +683,7 @@
     "target": {
       "__id__": 2
     },
-    "component": "HelloWorld1",
+    "component": "HelloWorld",
     "handler": "on_back",
     "customEventData": ""
   },
@@ -704,7 +704,7 @@
     "_fitHeight": true
   },
   {
-    "__type__": "bcd4f/w9htBlLY/hg70lCQK",
+    "__type__": "280c3rsZJJKnZ9RqbALVwtK",
     "_name": "",
     "_objFlags": 0,
     "node": {
