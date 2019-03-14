@@ -32,7 +32,9 @@ node version_generator.js -v 1.0.0 -u http://10.180.5.150:8101/remote-assets/sub
 
 启动hotupdate，在浏览器打开http://10.180.5.150:8101/remote-assets/subgame/version.manifest如果能看到正常的version.manifest内容说明，服务器搭建成功，热更新文件能正常访问。
 
+
 ##数据传递
+
 ###main.js
 1.初始化window.gameMgr对象
 ```$xslt
@@ -56,6 +58,7 @@ cc.director.loadScene(launchScene, null,
 ```
 
 
+
 ###hall.js
 2.将大厅数据赋值给windows.gameMgr.hall，并且获取子游戏数据
 
@@ -65,6 +68,7 @@ if ("undefined" != typeof(window.gameMgr.subgame)){
     this.tips.string = window.gameMgr.subgame;
 }
 ```
+
 ###HelloWorld.js
 3.将子游戏数据赋值给windows.gameMgr.subgame，并且获取大厅数据
 
