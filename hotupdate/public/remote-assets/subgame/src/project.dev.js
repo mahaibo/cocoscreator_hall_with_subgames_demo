@@ -49,9 +49,7 @@ require = function() {
       },
       onLoad: function onLoad() {
         this.label.string = this.text;
-        window._DataMgr.helloworld = "hello world!!!";
-        cc.log("helloworld1 onLoad")
-        cc.log(window._DataMgr.helloworld)
+        window.gameMgr.helloworld = "hello world!!!";
       },
       update: function update(dt) {},
       on_back: function on_back() {

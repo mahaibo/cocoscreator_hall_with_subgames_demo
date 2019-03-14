@@ -17,8 +17,8 @@ cc.Class({
     // use this for initialization
     onLoad: function() {
         this._storagePath = ((jsb.fileUtils ? jsb.fileUtils.getWritablePath() : '/') + 'ALLGame/' + "subgame");
-        cc.log("windows._dataMgr");
-
+        cc.log("window.gameMgr");
+        cc.log(window.gameMgr.helloworld)
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -336,10 +336,6 @@ cc.Class({
             return;
         }
         cc.log("enter_sub_game")
-
-
-        cc.log("window._DataMgr")
-        cc.log(window._DataMgr.helloworld)
 
         cc.log(this._storagePath + "/src/main.js")
         require(this._storagePath + "/src/main.js");
