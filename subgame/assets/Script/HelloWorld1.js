@@ -14,8 +14,10 @@ cc.Class({
 
     // use this for initialization
     onLoad: function() {
-        this.label.string = this.text;
-        window.gameMgr.helloworld = "hello world!!!";
+        window.gameMgr.subgame = "subgame";
+        if ("undefined" != typeof(window.gameMgr.subgame)){
+            this.label.string = window.gameMgr.hall;
+        }
     },
 
     // called every frame

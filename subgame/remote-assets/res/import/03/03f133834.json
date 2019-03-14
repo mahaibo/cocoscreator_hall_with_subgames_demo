@@ -186,7 +186,7 @@
       ],
       "_contentSize": {
         "__type__": "cc.Size",
-        "width": 147,
+        "width": 240,
         "height": 60
       },
       "_position": {
@@ -203,6 +203,7 @@
       "_actualFontSize": 60,
       "_fontSize": 60,
       "_lineHeight": 60,
+      "_N$string": "大厅数据",
       "_N$horizontalAlign": 1,
       "_N$verticalAlign": 1
     },

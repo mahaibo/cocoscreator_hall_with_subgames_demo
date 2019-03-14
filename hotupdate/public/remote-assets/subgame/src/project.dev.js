@@ -48,8 +48,8 @@ require = function() {
         text: "Hello_World!"
       },
       onLoad: function onLoad() {
-        this.label.string = this.text;
-        window.gameMgr.helloworld = "hello world!!!";
+        window.gameMgr.subgame = "subgame";
+        "undefined" != typeof window.gameMgr.subgame && (this.label.string = window.gameMgr.hall);
       },
       update: function update(dt) {},
       on_back: function on_back() {

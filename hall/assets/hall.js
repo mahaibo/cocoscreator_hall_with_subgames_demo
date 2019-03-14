@@ -12,13 +12,22 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
+        tips: {
+            default: null,
+            type: cc.Label
+        }
+
     },
 
     // use this for initialization
     onLoad: function() {
         this._storagePath = ((jsb.fileUtils ? jsb.fileUtils.getWritablePath() : '/') + 'ALLGame/' + "subgame");
         cc.log("window.gameMgr");
-        cc.log(window.gameMgr.helloworld)
+        window.gameMgr.hall = "hall";
+        if ("undefined" != typeof(window.gameMgr.hall)){
+            this.tips.string = window.gameMgr.subgame;
+        }
+
     },
 
     // called every frame, uncomment this function to activate update callback
