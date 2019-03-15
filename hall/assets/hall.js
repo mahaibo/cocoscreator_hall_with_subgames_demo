@@ -22,10 +22,10 @@ cc.Class({
     // use this for initialization
     onLoad: function() {
         this._storagePath = ((jsb.fileUtils ? jsb.fileUtils.getWritablePath() : '/') + 'ALLGame/' + "subgame");
-        cc.log("window.gameMgr");
-        window.gameMgr.hall = "hall";
-        if ("undefined" != typeof(window.gameMgr.subgame)){
-            this.tips.string = window.gameMgr.subgame;
+        cc.log("cc.gameMgr");
+        cc.gameMgr.hall = "hall";
+        if ("undefined" != typeof(cc.gameMgr.subgame)){
+            this.tips.string = cc.gameMgr.subgame;
         }
 
     },

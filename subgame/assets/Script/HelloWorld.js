@@ -1,4 +1,3 @@
-require("./DataMgr");
 
 cc.Class({
     extends: cc.Component,
@@ -14,9 +13,9 @@ cc.Class({
 
     // use this for initialization
     onLoad: function() {
-        window.gameMgr.subgame = "subgame";
-        if ("undefined" != typeof(window.gameMgr.hall)){
-            this.label.string = window.gameMgr.hall;
+        cc.gameMgr.subgame = "subgame";
+        if ("undefined" != typeof(cc.gameMgr.hall)){
+            this.label.string = cc.gameMgr.hall;
         }
     },
 

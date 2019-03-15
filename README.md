@@ -51,7 +51,7 @@ cc.director.loadScene(launchScene, null,
         }
         cc.loader.onProgress = null;
         console.log('Success to load scene: ' + launchScene);
-        window.gameMgr = {}
+        cc.gameMgr = {}
     }
 );
 
@@ -63,9 +63,9 @@ cc.director.loadScene(launchScene, null,
 2.将大厅数据赋值给windows.gameMgr.hall，并且获取子游戏数据
 
 ```$xslt
-window.gameMgr.hall = "hall";
-if ("undefined" != typeof(window.gameMgr.subgame)){
-    this.tips.string = window.gameMgr.subgame;
+cc.gameMgr.hall = "hall";
+if ("undefined" != typeof(cc.gameMgr.subgame)){
+    this.tips.string = cc.gameMgr.subgame;
 }
 ```
 
@@ -73,8 +73,8 @@ if ("undefined" != typeof(window.gameMgr.subgame)){
 3.将子游戏数据赋值给windows.gameMgr.subgame，并且获取大厅数据
 
 ```$xslt
-window.gameMgr.subgame = "subgame";
-if ("undefined" != typeof(window.gameMgr.hall)){
-    this.label.string = window.gameMgr.hall;
+cc.gameMgr.subgame = "subgame";
+if ("undefined" != typeof(cc.gameMgr.hall)){
+    this.label.string = cc.gameMgr.hall;
 }
 ```

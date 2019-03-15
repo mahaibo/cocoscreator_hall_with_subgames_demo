@@ -24,20 +24,10 @@ require = function() {
   }
   return r;
 }()({
-  DataMgr: [ function(require, module, exports) {
-    "use strict";
-    cc._RF.push(module, "b84e4nyeAlDgbbajDRBrAUC", "DataMgr");
-    "use strict";
-    window._DataMgr = {
-      helloworld: ""
-    };
-    cc._RF.pop();
-  }, {} ],
   HelloWorld: [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "280c3rsZJJKnZ9RqbALVwtK", "HelloWorld");
     "use strict";
-    require("./DataMgr");
     cc.Class({
       extends: cc.Component,
       properties: {
@@ -48,8 +38,8 @@ require = function() {
         text: "Hello_World!"
       },
       onLoad: function onLoad() {
-        window.gameMgr.subgame = "subgame";
-        "undefined" != typeof window.gameMgr.hall && (this.label.string = window.gameMgr.hall);
+        cc.gameMgr.subgame = "subgame";
+        "undefined" != typeof cc.gameMgr.hall && (this.label.string = cc.gameMgr.hall);
       },
       update: function update(dt) {},
       on_back: function on_back() {
@@ -59,7 +49,5 @@ require = function() {
       }
     });
     cc._RF.pop();
-  }, {
-    "./DataMgr": "DataMgr"
-  } ]
-}, {}, [ "DataMgr", "HelloWorld" ]);
+  }, {} ]
+}, {}, [ "HelloWorld" ]);

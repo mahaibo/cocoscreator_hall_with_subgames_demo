@@ -1,3 +1,0 @@
-window._DataMgr = {
-    helloworld: ""
-};
