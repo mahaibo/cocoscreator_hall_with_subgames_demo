@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29d133b0-4c5d-49a6-8f21-2b8b17c1b65c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hall/assets/hall.js" beforeDir="false" afterPath="$PROJECT_DIR$/hall/assets/hall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hall/build-templates/jsb-link/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/hall/build-templates/jsb-link/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hotupdate/public/remote-assets/subgame/peision.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/hotupdate/public/remote-assets/subgame/peision.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hotupdate/public/remote-assets/subgame/src/project.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/hotupdate/public/remote-assets/subgame/src/project.dev.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subgame/assets/Script/DataMgr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/subgame/assets/Script/DataMgr.js.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/subgame/assets/Script/HelloWorld.js" beforeDir="false" afterPath="$PROJECT_DIR$/subgame/assets/Script/HelloWorld.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subgame/remote-assets/peision.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/subgame/remote-assets/peision.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subgame/remote-assets/src/project.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/subgame/remote-assets/src/project.dev.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -79,8 +69,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="652">
-                <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
+              <first_editor relative-caret-position="76">
+                <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -328,12 +318,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552541558371</updated>
-      <workItem from="1552541559650" duration="35949000" />
+      <workItem from="1552541559650" duration="36566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35949000" />
+    <option name="totallyTimeSpent" value="36566000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="965" extended-state="0" />
@@ -586,8 +576,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="652">
-            <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
+          <first_editor relative-caret-position="76">
+            <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>

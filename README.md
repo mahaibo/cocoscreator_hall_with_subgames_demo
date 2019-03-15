@@ -2,7 +2,7 @@
 
 
 大厅和子游戏均为正常cocos creater项目，只是热更新的时候指向的地址和本地保存的目录不一样。
-##热更新
+## 热更新
 1.  创建大厅项目
 详细逻辑见 hall项目
 
@@ -33,9 +33,9 @@ node version_generator.js -v 1.0.0 -u http://10.180.5.150:8101/remote-assets/sub
 启动hotupdate，在浏览器打开http://10.180.5.150:8101/remote-assets/subgame/version.manifest如果能看到正常的version.manifest内容说明，服务器搭建成功，热更新文件能正常访问。
 
 
-##数据传递
+## 数据传递
 
-###main.js
+### main.js
 1.初始化window.gameMgr对象
 ```$xslt
 // load scene
@@ -59,7 +59,7 @@ cc.director.loadScene(launchScene, null,
 
 
 
-###hall.js
+### hall.js
 2.将大厅数据赋值给windows.gameMgr.hall，并且获取子游戏数据
 
 ```$xslt
@@ -69,7 +69,7 @@ if ("undefined" != typeof(cc.gameMgr.subgame)){
 }
 ```
 
-###HelloWorld.js
+### HelloWorld.js
 3.将子游戏数据赋值给windows.gameMgr.subgame，并且获取大厅数据
 
 ```$xslt
