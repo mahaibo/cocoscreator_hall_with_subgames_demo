@@ -36,7 +36,7 @@ node version_generator.js -v 1.0.0 -u http://10.180.5.150:8101/remote-assets/sub
 ## 数据传递
 
 ### main.js
-1.初始化window.gameMgr对象
+1.初始化cc.gameMgr对象
 ```$xslt
 // load scene
 cc.director.loadScene(launchScene, null,
